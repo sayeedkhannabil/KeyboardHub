@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+}
+
+.login-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('login-background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.login-form{
+    height: 400px;
+    width: 400px;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+.login-heading{
+    font-size:  40px;
+    color: white;
+    font-family:monospace;
+}
+
+.login-fields{
+    width: 300px;
+}
+.login-fields input{
+    margin: 10px;
+    border: 2px solid grey;
+    border-radius: 40px;
+    height:40px;
+    width: 100%;
+    padding: 20px;
+}
+
+.login-btn{
+    width: 300px;
+    
+}
+.login-btn button{
+    border: 2px solid grey;
+    border-radius: 40px;
+    height:40px;
+    width: 100%;
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.login-btn button:hover{
+    cursor: pointer;
+}
+
+.login-register{
+    font-size: 14.5px;
+    margin-top: 20px;
+    color:white;
+}
+
+.login-register p a{
+    color:white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
+}
