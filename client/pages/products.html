@@ -26,26 +26,41 @@
                 <div>
                     <button class="close-button close">X</button>
                 </div>
-                <div>
+                <div class="filter-heading">
                     <h2>Filter</h2>
                 </div>
-                <h3> Brand</h3>
-                <div class="filter-option">
-                    <label>
-                        <input type="checkbox" name="brand" value="brand1" /> Brand 1
-                    </label>
-                    <label>
-                        <input type="checkbox" name="brand" value="brand2" /> Brand 2
-                    </label>
+                <div id="brand">
+                    <div class="sidebar-subheadings">
+                        <h3> Brand</h3>
+                       <!-- <input type = button value =">" /> -->
+                       <div class="arrow"></div>
+                       <div class="arrow2 hidden"></div>
+                    </div>
+    
+                    <div class="filter-option hidden">
+                        <label>
+                            <input type="checkbox" name="brand" value="brand1" /> Brand 1
+                        </label>
+                        <label>
+                            <input type="checkbox" name="brand" value="brand2" /> Brand 2
+                        </label>
+                    </div>
                 </div>
-                <h3> Price</h3>
-                <div class="filter-option">
+               <div id="price">
+                <div class="sidebar-subheadings">
+                    <h3> Price</h3>
+                    <!-- <input type = button value =">" /> -->
+                    <div class="arrow"></div>
+                    <div class="arrow2 hidden"></div>
+                </div>
+                <div class="filter-option hidden">
                     <label>
                         <input type="checkbox" name="price" value="range1" /> $0 - $50
                     </label>
                     <label>
                         <input type="checkbox" name="price" value="range2" /> $50 - $100
                     </label>
+                </div>
                 </div>
             </div>
         </div>

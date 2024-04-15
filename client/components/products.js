@@ -29,3 +29,42 @@ document.getElementsByClassName('close-button')[0].addEventListener('click', fun
         vanishBtn.style.display = 'none'; // Hide the sidebar
     }
 });
+
+
+document.getElementById('brand').childNodes[1].childNodes[5].addEventListener('click',function(){
+
+    var showArrow = document.getElementById('brand').childNodes;
+    showArrow[3].classList.remove('hidden');
+    showArrow[1].childNodes[5].classList.add('hidden');
+    showArrow[1].childNodes[7].classList.remove('hidden');
+       
+
+});
+
+document.getElementById('price').childNodes[1].childNodes[5].addEventListener('click',function(){
+
+    var showArrow = document.getElementById('price').childNodes;
+    showArrow[3].classList.remove('hidden');
+    showArrow[1].childNodes[5].classList.add('hidden');
+    showArrow[1].childNodes[7].classList.remove('hidden');
+
+});
+
+document.getElementById('brand').childNodes[1].childNodes[7].addEventListener('click',function(){
+
+    var showArrow = document.getElementById('brand').childNodes;
+    showArrow[3].classList.add('hidden');
+    showArrow[1].childNodes[5].classList.remove('hidden');
+    showArrow[1].childNodes[7].classList.add('hidden');
+       
+
+});
+
+document.getElementById('price').childNodes[1].childNodes[7].addEventListener('click',function(){
+
+    var showArrow = document.getElementById('price').childNodes;
+    showArrow[3].classList.add('hidden');
+    showArrow[1].childNodes[5].classList.remove('hidden');
+    showArrow[1].childNodes[7].classList.add('hidden');
+
+});
