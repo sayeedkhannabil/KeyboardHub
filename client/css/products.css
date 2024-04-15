@@ -28,6 +28,11 @@
 
 }
 
+.sidebar-flex{
+    display: flex;
+    flex-direction: column;
+}
+
 .filter-option {
     margin-bottom: 10px;
     /* Space between options */
