@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/client/css/products.css" />
+</head>
+
+<body>
+    <div class="background">
+        <!--<button class = button id="toggleButton">  </button> -->
+        <button class="btn button" id="toggleButton">
+            <span class="icon">
+                <svg class="svg" viewBox="0 0 175 80" width="40" height="40">
+                    <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                    <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                    <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                </svg>
+            </span>
+            <span class="text">Filter</span>
+        </button>
+        <div class="sidebar" id="mySidebar">
+            <div>
+                <button class="close-button close">X</button>
+            </div>
+            <h2>Filter</h>
+                <h3> Brand</h3>
+                <div class="filter-option">
+                    <label>
+                        <input type="checkbox" name="brand" value="brand1" /> Brand 1
+                    </label>
+                    <label>
+                        <input type="checkbox" name="brand" value="brand2" /> Brand 2
+                    </label>
+                </div>
+                <h3> Price</h3>
+                <div class="filter-option">
+                    <label>
+                        <input type="checkbox" name="price" value="range1" /> $0 - $50
+                    </label>
+                </div>
+                <div class="filter-option">
+                    <label>
+                        <input type="checkbox" name="price" value="range2" /> $50 - $100
+                    </label>
+                </div>
+        </div>
+    </div>
+</body>
+<script src="../components/products.js"></script>
+
+</html>
