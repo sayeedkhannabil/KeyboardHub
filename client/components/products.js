@@ -10,6 +10,7 @@ document.getElementById('toggleButton').addEventListener('click', function() {
     if (vanishBtn.style.display === 'none') {
         vanishBtn.style.display = 'block'; // Show the sidebar
     } else {
+        document.getElementsByClassName("sidebar-test")[0].classList.remove('hidden');
         vanishBtn.style.display = 'none'; // Hide the sidebar
     }
 });
@@ -25,6 +26,7 @@ document.getElementsByClassName('close-button')[0].addEventListener('click', fun
 
     if (vanishBtn.style.display === 'none') {
         vanishBtn.style.display = 'block'; // Show the sidebar
+        document.getElementsByClassName("sidebar-test")[0].classList.add('hidden');
     } else {
         vanishBtn.style.display = 'none'; // Hide the sidebar
     }

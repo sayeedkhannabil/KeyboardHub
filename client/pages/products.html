@@ -9,18 +9,9 @@
 </head>
 
 <body>
+    </div>
     <div class="background">
         <!--<button class = button id="toggleButton">  </button> -->
-        <button class="btn button" id="toggleButton">
-            <span class="icon">
-                <svg class="svg" viewBox="0 0 175 80" width="40" height="40">
-                    <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
-                    <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
-                    <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
-                </svg>
-            </span>
-            <span class="text">Filter</span>
-        </button>
         <div class="sidebar" id="mySidebar">
             <div class="sidebar-flex">
                 <div>
@@ -32,11 +23,11 @@
                 <div id="brand">
                     <div class="sidebar-subheadings">
                         <h3> Brand</h3>
-                       <!-- <input type = button value =">" /> -->
-                       <div class="arrow"></div>
-                       <div class="arrow2 hidden"></div>
+                        <!-- <input type = button value =">" /> -->
+                        <div class="arrow"></div>
+                        <div class="arrow2 hidden"></div>
                     </div>
-    
+
                     <div class="filter-option hidden">
                         <label>
                             <input type="checkbox" name="brand" value="brand1" /> Brand 1
@@ -46,25 +37,49 @@
                         </label>
                     </div>
                 </div>
-               <div id="price">
-                <div class="sidebar-subheadings">
-                    <h3> Price</h3>
-                    <!-- <input type = button value =">" /> -->
-                    <div class="arrow"></div>
-                    <div class="arrow2 hidden"></div>
-                </div>
-                <div class="filter-option hidden">
-                    <label>
-                        <input type="checkbox" name="price" value="range1" /> $0 - $50
-                    </label>
-                    <label>
-                        <input type="checkbox" name="price" value="range2" /> $50 - $100
-                    </label>
-                </div>
+                <div id="price">
+                    <div class="sidebar-subheadings">
+                        <h3> Price</h3>
+                        <!-- <input type = button value =">" /> -->
+                        <div class="arrow"></div>
+                        <div class="arrow2 hidden"></div>
+                    </div>
+                    <div class="filter-option hidden">
+                        <label>
+                            <input type="checkbox" name="price" value="range1" /> $0 - $50
+                        </label>
+                        <label>
+                            <input type="checkbox" name="price" value="range2" /> $50 - $100
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="navbar">
+            <div class="sidebar-test hidden">
+            </div>
+            <div>
+            <button class="btn button" id="toggleButton">
+                <span class="icon">
+                    <svg class="svg" viewBox="0 0 175 80" width="40" height="40">
+                        <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                        <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                        <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                    </svg>
+                </span>
+                <span class="text">Filter</span>
+            </button>
+            <!-- </div>
+                <div class="search">
+                    <input placeholder="Search..." type="text">
+                    <button type="submit">Go</button>
+                </div>
+            </div>
+        </div> -->
+
     </div>
+
 </body>
 <script src="../components/products.js"></script>
 

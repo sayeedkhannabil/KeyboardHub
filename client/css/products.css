@@ -25,7 +25,20 @@
     /* Enable scrolling if content is too long */
     display: none;
     /* Hide the sidebar by default */
+}
 
+.sidebar-test {
+    width: 200px;
+    /* Adjust width as necessary */
+    background-color: transparent;
+    padding: 20px;
+    /* Padding around the content */
+    /* Fixed position to the side of the page */
+    height: 100%;
+    /* Full height */
+    overflow-y: auto;
+    /* Enable scrolling if content is too long */
+    /* Hide the sidebar by default */
 }
 
 .sidebar-flex{
@@ -258,4 +271,50 @@ h3 {
     border-bottom-width: 4px;
     border-right-width: 4px;
     cursor: pointer;
+  }
+
+
+
+  /* search */
+
+
+  .search {
+    display: inline-block;
+    position: relative;
+    margin: 30px;
+
+  }
+  
+  .search input[type="text"] {
+    width: auto;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search button[type="submit"] {
+    background-color: #4e99e9;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .9s ease;
+  }
+  
+  .search button[type="submit"]:hover {
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    background-color: blue;
+  }
+
+
+  .navbar {
+    display: flex;
+    background : transparent;
   }
