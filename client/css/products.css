@@ -278,43 +278,27 @@ h3 {
   /* search */
 
 
-  .search {
-    display: inline-block;
-    position: relative;
-    margin: 30px;
-
-  }
-  
-  .search input[type="text"] {
-    width: auto;
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .search button[type="submit"] {
-    background-color: #4e99e9;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    padding: 10px 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 0;
-    right: 0;
-    transition: .9s ease;
-  }
-  
-  .search button[type="submit"]:hover {
-    transform: scale(1.1);
-    color: rgb(255, 255, 255);
-    background-color: blue;
-  }
-
+ 
 
   .navbar {
     display: flex;
     background : transparent;
   }
+
+
+.search{
+    height: 100px;
+    width: fit-content;
+    display: flex;
+    
+}
+
+.search-btn{
+    height: 45px;
+    margin-top: 30px;
+    width: 150vh;
+
+    @media (max-width: 1000px){
+        width: auto;
+    }
+}
