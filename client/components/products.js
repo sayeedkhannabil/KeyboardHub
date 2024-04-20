@@ -30,7 +30,14 @@ document.addEventListener('DOMContentLoaded', function() {
         pagination.innerHTML = ''; // Clear previous controls
         for (let i = 1; i <= totalPages; i++) {
             const pageItem = document.createElement('li');
-            pageItem.className = `page-item ${page === i ? 'active' : ''}`;
+            //pageItem.className = `page-item ${page === i ? 'active' : ''}`;
+            
+            if (page === i) {
+                pageItem.className = 'page-item active';
+            } else {
+                pageItem.className = 'page-item';
+            }
+            
             const pageLink = document.createElement('a');
             pageLink.className = 'page-link';
             pageLink.href = '#';
