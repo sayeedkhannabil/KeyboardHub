@@ -280,3 +280,11 @@
       opacity: 1;
     }
   }
+
+
+.products-heading{
+  text-align: center;
+  color: white;
+  font-family: monospace;
+  font-weight: 800;
+}
