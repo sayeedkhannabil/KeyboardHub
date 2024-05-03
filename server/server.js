@@ -1,16 +1,12 @@
+import { createClient } from "@supabase/supabase-js";
+import "dotenv/config";
 
-import { createClient } from '@supabase/supabase-js';
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_KEY
+);
 
-const supabase = createClient('', '')
+const { data, error } = await supabase.from("users").select();
 
-
-    const {data, error} = await supabase
-    .from('users')
-    .select();
-  
-    console.log(data);
-
-
-
-
-
+console.log(data);
+console.log(error);
