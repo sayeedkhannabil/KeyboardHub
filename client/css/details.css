@@ -5,27 +5,25 @@
 
 .flex-container{
     display: flex;
-    flex-wrap: wrap;
+    
 
 }
 
 .image-box{
-    width: 50dvw;
-    height: 100dvh;
+    width: 50em;
+    min-height: 46.56em;
+    height: auto;
     display: flex;
     align-items: center;
     border: 2px solid black;
-
-    @media (max-width: 598px) {
-        width: 598px;
-    }
   
 }
 
 .details-box{
-    width: 50dvw;
-    height: 100dvh;
-    background-color: rgb(44, 200, 35, 0.5);
+    width: 50em;
+    min-height: 46.56em;
+    height: auto;
+    background-color:transparent;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
@@ -41,7 +39,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100dvh;
+    height: 50em;
 }
 
 .product-image {
@@ -52,17 +50,135 @@
 }
 
 .header-footer{
-    height: 20dvh;
+    min-height: 7em;
+    height: auto;
     width: 100%;
-    background-color: rosybrown;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .keyboard-description{
     height: auto;
     width: 100%;
     gap: 5px;
+    display: flex;
+    justify-content: center;
 }
 
 .sub-details-box{
     display: grid;
 }
+
+.key-name{
+    font-size: 25px;
+    width: 90%;
+}
+
+.sku{
+
+    width: 90%;
+}   
+
+.keyboard-description > p{
+    width: 90%;
+}
+
+
+
+.CartBtn {
+    width: 140px;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+    background-color: rgb(255, 208, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: .5s;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+  }
+  
+  .IconContainer {
+    position: absolute;
+    left: -50px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+    transition-duration: .5s;
+  }
+  
+  .icon {
+    border-radius: 1px;
+  }
+  
+  .text {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(17, 17, 17);
+    z-index: 1;
+    transition-duration: .5s;
+    font-size: 1.04em;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  
+  .CartBtn:hover .IconContainer {
+    cursor: pointer;
+  }
+  
+  
+  .foot{
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5px;
+  }
+
+  .foot >input{
+    border-radius: 10em;
+    height: 40px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    width: clamp(10px, 60%, 200px);
+    
+  }
+
+  .foot >input::placeholder{
+    color: white;
+    font-size: 17px;
+  }
+
+
+
+  .nav{
+    height: 8em;
+    width: 100%;
+    background-image: url(../assests/login-background.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .back-search{
+    width: 95%;
+    height: 6em;
+    
+  }
+
+
+
+  
