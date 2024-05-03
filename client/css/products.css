@@ -61,9 +61,20 @@
 }
 
 .filter-options-heading{
+    display: flex;
+    justify-content: space-around;
     margin-top: 15px;
+    width: 100%;
 }
 
+
+.filter-options li{
+  width: 100%;
+}
+
+.sublist-filter-options li{
+  width: 100%;
+}
 
 .down-arrow, .up-arrow{
     float: right;
