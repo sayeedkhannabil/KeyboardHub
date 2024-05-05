@@ -1,7 +1,9 @@
 import express from 'express';
 import productRoutes from './routes/products.js';
+import cors from 'cors';
 
 const app = express();
+app.use(cors());
 
 // Middleware
 app.use(express.json()); // for parsing application/json
