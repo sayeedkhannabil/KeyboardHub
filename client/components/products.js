@@ -29,7 +29,7 @@ document.getElementById("close-button").addEventListener("click", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   let itemsPerPage = 6;
-  let totalItems = 30; // Total number of items
+  let totalItems = 50; // Total number of items
   let totalPages = Math.ceil(totalItems / itemsPerPage);
   let currentPage = 1;
 
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let i = start; i < end && i < totalItems; i++) {
           const cardHTML = `<div class="col-md-4 col-sml-3 mb-4" id = "${
             i + 1
-          }"><div class="card"><img src="https://via.placeholder.com/150" class="card-img-top" alt="..."><div class="card-body">
+          }"><div class="card"><img height = '220' width = '600' src="https://via.placeholder.com/150" class="card-img-top" alt="..."><div class="card-body">
                                       <h5 class="card-title">Product ${
                                         i + 1
                                       }</h5>
@@ -69,6 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
             .childNodes[0].childNodes[1].getElementsByTagName(
               "p"
             )[0].innerHTML = data[i].description;
+            
+            document.getElementById(i + 1).childNodes[0].childNodes[0].src=data[i].image;
         }
       } else {
         console.log("No data found");
@@ -76,9 +78,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  console.log(totalPages)
+
   function renderPagination(page) {
     const pagination = document.querySelector(".pagination");
     pagination.innerHTML = ""; // Clear previous controls
+    // getProductData().then((data) => {totalItems = data.length;});
     for (let i = 1; i <= totalPages; i++) {
       const pageItem = document.createElement("li");
       //pageItem.className = `page-item ${page === i ? 'active' : ''}`;
@@ -105,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   renderItems(currentPage);
+  setTimeout(renderPagination, 100);
   renderPagination(currentPage);
 });
 
