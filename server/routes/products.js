@@ -11,7 +11,8 @@ const supabase = createClient(process.env.SUPABASE_URL,process.env.SUPABASE_KEY)
 router.get('/', async (req, res) => {
   const { data, error } = await supabase
     .from('products')
-    .select('*');
+    .select('*')
+    .order('id', { ascending: true });
 
   if (error) return res.status(400).send(error);
   res.json(data);
