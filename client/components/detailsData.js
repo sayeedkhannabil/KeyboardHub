@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const getProductData = async () => {
+const getDetailsData = async (id) => {
     try {
-        const response = await axios.get('http://localhost:3000/api/products');
+        const response = await axios.get('http://localhost:3000/api/products/' + id);
         const values = response.data;
 
         return values;
@@ -15,4 +15,4 @@ const getProductData = async () => {
     
 }
 
-export default getProductData;
+export default getDetailsData;

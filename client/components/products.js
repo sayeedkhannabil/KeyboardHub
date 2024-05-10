@@ -44,15 +44,12 @@ document.addEventListener("DOMContentLoaded", function () {
         totalItems = data.length;
         totalPages = Math.ceil(totalItems / itemsPerPage);
         for (let i = start; i < end && i < totalItems; i++) {
-          const cardHTML = `<div class="col-md-4 col-sml-3 mb-4" id = "${
+          const cardHTML = `<div class="col-md-4 col-sml-3 mb-4 product-div" id = "${
             i + 1
           }"><div class="card"><img height = '220' width = '600' src="https://via.placeholder.com/150" class="card-img-top" alt="..."><div class="card-body">
                                       <h5 class="card-title">Product ${
                                         i + 1
                                       }</h5>
-                                      <p class="card-text">Description of product ${
-                                        i + 1
-                                      }</p>
                                       <a href="#" class="btn btn-primary">Add to Cart</a>
                                   </div>
                               </div>
@@ -64,11 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
             .childNodes[0].childNodes[1].getElementsByTagName(
               "h5"
             )[0].innerHTML = data[i].name;
-          document
-            .getElementById(i + 1)
-            .childNodes[0].childNodes[1].getElementsByTagName(
-              "p"
-            )[0].innerHTML = data[i].description;
             
             document.getElementById(i + 1).childNodes[0].childNodes[0].src=data[i].image;
         }
@@ -110,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   renderItems(currentPage);
-  setTimeout(renderPagination, 100);
+  setTimeout(renderPagination, 200);
   renderPagination(currentPage);
 });
 
@@ -152,15 +144,4 @@ document.getElementById("stock-button").addEventListener("click", function () {
   menuOpenClose("stock-button", "stock");
 });
 
-// getProductData().then(data => {
-//     if (data) {
-//         console.log(data[0]);
 
-//             document.getElementById('1').childNodes[0].childNodes[1].getElementsByTagName('h5')[0].innerHTML = data[0].name;
-//         document.getElementById('1').childNodes[0].childNodes[1].getElementsByTagName('p')[0].innerHTML = data[0].description;
-
-//     }
-//     else {
-//         console.log('No data found');
-//     }
-// });

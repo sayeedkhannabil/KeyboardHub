@@ -299,3 +299,7 @@
   font-family: monospace;
   font-weight: 800;
 }
+
+.product-div:hover{
+  cursor: pointer;
+}
