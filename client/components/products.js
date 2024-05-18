@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                       <h5 class="card-title">Product ${
                                         i + 1
                                       }</h5>
-                                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                                      <a href="details.html#${data[i].id}" class="btn btn-primary">Add to Cart</a>
                                   </div>
                               </div>
                           </div>`;
