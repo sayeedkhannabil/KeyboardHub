@@ -23,12 +23,10 @@ async function loadProductDetails(productId) {
 function updateProductDetails(product) {
     console.log(product.image)
     console.log(product.name)
-    console.log(product.sku)
     console.log(product.price)
     console.log(product.description)
     document.querySelector(".product-image").src = product.image;
     document.querySelector(".key-name").innerText = product.name;
-    document.querySelector(".sku").innerText = 'SKU: ' + product.sku;
-    document.querySelector(".key-name.price").innerText = `$${product.price}`;
+    document.querySelectorAll(".key-name")[1].innerText = `$${product.price}`;
     document.querySelector(".keyboard-description p").innerHTML = product.description.split('<br />').join("<br>");
 }
