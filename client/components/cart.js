@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     let itemsPerPage = 6;
-    let totalItems = 50; // Total number of items
+    let totalItems = 6; // Total number of items
     let totalPages = Math.ceil(totalItems / itemsPerPage);
     let currentPage = 1;
   
@@ -37,10 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
             productGrid.innerHTML += cardHTML;
           }
+          plus();
+          minus(totalItems);
     }
   
-    console.log(totalPages)
-  
+    
+
     function renderPagination(page) {
       const pagination = document.querySelector(".pagination");
       pagination.innerHTML = ""; // Clear previous controls
@@ -73,16 +75,51 @@ document.addEventListener("DOMContentLoaded", function () {
     renderItems(currentPage);
     setTimeout(renderPagination, 200);
     renderPagination(currentPage);
-    //plusMinus();
+
+    
   });
 
 
+  function plus(){
+
+   var len = document.getElementsByClassName('plus').length;
+   for(var i = 0; i < len; i++){
+    document.getElementsByClassName('plus')[i].addEventListener('click',function(){
+        var a = this.parentNode.childNodes[3].innerHTML;
+        var b = Number(a);
+        b = "" + b;
+        b++;
+        this.parentNode.childNodes[3].innerHTML = b;
+    });
+   }
+
+  }
+
+  function minus(totalItems){
+
+    var len = document.getElementsByClassName('minus').length;
+    for(var i = 0; i < len; i++){
+     document.getElementsByClassName('minus')[i].addEventListener('click',function(){
+         var a = this.parentNode.childNodes[3].innerHTML;
+         var b = Number(a);
+         b = "" + b;
+         b--;
+         if(b == 0){
+            totalItems--;
+            this.parentNode.parentNode.parentNode.remove();
+         }
+         if(b > 0){
+            this.parentNode.childNodes[3].innerHTML = b;
+         }
+         
+     });
+    }
+ 
+   }
    
 
  
-
-  
-  
+ 
 
 
   
