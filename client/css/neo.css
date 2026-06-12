@@ -1,0 +1,26 @@
+/* Shared neobrutalism base — imported by every page */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;800&display=swap');
+
+:root {
+  --bg: #f5f0e8;
+  --black: #0d0d0d;
+  --white: #ffffff;
+  --yellow: #ffe566;
+  --pink: #ff6b9d;
+  --teal: #06d6a0;
+  --border: 3px solid #0d0d0d;
+  --shadow-sm: 3px 3px 0 #0d0d0d;
+  --shadow: 4px 4px 0 #0d0d0d;
+  --shadow-lg: 6px 6px 0 #0d0d0d;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--black);
+  -webkit-font-smoothing: antialiased;
+}

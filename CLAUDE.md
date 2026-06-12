@@ -98,12 +98,44 @@ Supabase PostgreSQL
 
 ---
 
-## Frontend Design Skills & Conventions
+## Frontend Design System — Neobrutalism
 
-When working on UI, follow these conventions already present in the codebase:
+The site uses a neobrutalism visual style. All pages import `client/css/neo.css` first (CSS variables and Google Font), then Bootstrap, then the page-specific CSS.
 
-- **Bootstrap 4** grid and utility classes are the primary layout mechanism. Avoid introducing a second CSS framework.
-- Each page has a dedicated CSS file in `client/css/` — keep styles scoped to their page file.
-- Assets (images) live in `client/assests/` (note the existing typo in the folder name — do not rename to avoid breaking references).
-- Typed.js is already a dependency; use it for any animated text effects on the landing page.
-- New pages follow the pattern: `pages/<name>.html` + `components/<name>.js` + `css/<name>.css`.
+**Design tokens** (defined in `neo.css` as CSS custom properties):
+
+| Token | Value | Use |
+|-------|-------|-----|
+| `--bg` | `#f5f0e8` | Page background (warm cream) |
+| `--black` | `#0d0d0d` | Borders, text, shadows |
+| `--yellow` | `#ffe566` | Primary accent, navbar, CTAs |
+| `--pink` | `#ff6b9d` | Secondary accent (close button, badges) |
+| `--teal` | `#06d6a0` | Signup accent |
+| `--border` | `3px solid #0d0d0d` | All borders |
+| `--shadow` | `4px 4px 0 #0d0d0d` | Hard offset shadow (no blur) |
+| `--shadow-lg` | `6px 6px 0 #0d0d0d` | Large cards |
+
+**Rules:**
+- `border-radius: 0` everywhere — no rounded corners.
+- Shadows are hard/flat (no `blur` value). Hover state shifts by `translate(2px, 2px)` and reduces shadow to simulate a press.
+- Typography: **Space Grotesk** (weight 400/500/700/800). Headings are uppercase with tight letter-spacing.
+- No background images or gradients on any page. All pages use solid `--bg` cream.
+- Bootstrap 4 is still used for the product grid layout only. Its `card`, `btn-primary`, and `pagination` classes are overridden with `!important` to match neobrutalism.
+
+**Shared font import:** `neo.css` imports Space Grotesk from Google Fonts. All `<link>` tags must be ordered: `neo.css` → Bootstrap → page CSS.
+
+**Per-page CSS files:**
+
+| File | Page | Notes |
+|------|------|-------|
+| `neo.css` | All | Variables + font only |
+| `index.css` | Landing | Hero section, feature strip |
+| `products.css` | Products + Details | Also imported by `details.html` for shared navbar styles |
+| `details.css` | Details | Product layout, cart button |
+| `cart.css` | Cart | Cart item cards, quantity counter |
+| `login.css` | Login | Form card with yellow heading badge |
+| `signup.css` | Signup | Same structure, teal accent instead of yellow |
+
+**Adding new pages:** follow the pattern `pages/<name>.html` + `components/<name>.js` + `css/<name>.css`. Import `neo.css` before Bootstrap in the `<head>`.
+
+Assets (images) live in `client/assests/` (existing typo — do not rename).
