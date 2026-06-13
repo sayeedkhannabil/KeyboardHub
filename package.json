@@ -1,0 +1,11 @@
+{
+  "name": "keyboardhub",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --names \"server,client\" --prefix-colors \"yellow,cyan\" \"node server/app.js\" \"npm run dev --prefix client\"",
+    "install:all": "npm install --prefix client && npm install --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
